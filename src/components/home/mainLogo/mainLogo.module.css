@@ -1,0 +1,122 @@
+#main_logo {
+    
+}
+
+.main_logo_light{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	z-index: 100;
+    margin: auto;
+	margin-bottom: 50px;
+    text-align: center;
+    width: 90%;
+}
+
+#main_logo > div {
+    height: 1850px;
+    text-align: center;
+}
+
+#main_logo img {
+    filter: var(--dropshadow);
+    position: sticky;
+    top: 200px;
+    max-width: 850px;
+}
+
+#main_logo h2 {
+    margin: auto;
+    position: sticky;
+    top: 700px;
+    width: 100%;
+}
+
+
+/*
+    ----------------------------------------------------------------
+        Scroll Down Arrow Element
+    ----------------------------------------------------------------
+*/
+#arrow {
+	width: 3vmin;
+	height: 3vmin;
+	box-sizing: border-box;
+	position: sticky;
+	top: 750px;
+    margin: auto;
+	transform: rotate(-225deg);
+    cursor: pointer;
+}
+	
+#arrow::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	border-width: .5vmin .5vmin 0 0;
+	border-style: solid;
+	border-color:  var(--custom-arrow-color);
+	transition: .3s ease;
+	display: block;
+	transform-origin: 100% 0;
+}
+
+
+#arrow:after {
+	content: '';
+	float: left;
+	position: relative;
+	top: -108%;
+	width: 100%;
+	height: 101%;
+	border-width: 0 .5vmin 0 0;
+	border-style: solid;
+	border-color:  var(--custom-arrow-color);
+	transform-origin: 100% 0;
+	transition:.3s ease;
+}
+
+#arrow:hover::after {
+	transform: rotate(45deg);
+	border-color: #68B54C;
+	height: 120%;
+}
+
+#arrow:hover::before {
+	border-color: #68B54C;
+	transform: scale(.8);
+}
+
+
+@media (max-width: 480px) {
+    #main_logo img {
+    	width: 100%;
+    	top: 350px;
+	}
+
+	#main_logo h2 {
+		font-size: 15px;
+    	top: 575px;
+	}
+
+	#arrow {
+		top: 610px;
+	}
+}
+
+@media (480px <= width <= 850px){
+    #main_logo img {
+    	width: 100%;
+    	top: 300px;
+	}
+
+	#main_logo h2 {
+		font-size: 15px;
+    	top: 625px;
+	}
+
+	#arrow {
+		top: 660px;
+	}
+}

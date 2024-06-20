@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.elaGreen { color: var(--elaGreen); }
+
+.underline { text-decoration: underline; }
+
+:root {
+  --elaGreen: #74ad74;
+  --arrowcolor: #000000;
+  --dropshadow: drop-shadow(16px 7px 8px #939393);
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --scrollbar-track-color: rgb(219, 219, 219);
+  --scrollbar-thumb-color: var(--elaGreen);
+  --custom-arrow-color: var(--arrowcolor);
+}
+
+html.dark {
+  --elaGreen: #74ad74;
+  background-color: #181818;
+  --color: #e0e0e0;
+  --background-color: rgb(29, 29, 29);
+  --arrowcolor: #ffffff;
+  --dropshadow: drop-shadow(16px 7px 8px #2c2c2c);
+  color: #e0e0e0;
+  --scrollbar-track-color: #333333;
+  --scrollbar-thumb-color: var(--elaGreen);
+  --custom-arrow-color: var(--arrowcolor);
+}
+
+::-webkit-scrollbar{
+  width: 12px;
+}
+
+::-webkit-scrollbar-track{
+  background: rgb(219, 219, 219) ;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--elaGreen);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  color: var(--elaGreen);
+}
+
+/* White input for register not blue */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 25pt;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px); /* O cualquier otra transformación que desees */
+  transition: opacity 0.5s, transform 0.5s;
+  text-align: justify;
+}  
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0); /* Restablece la transformación inicial */
+}
+
+.ReactModal__Body--open div {
+  z-index: 2000;
+}
+
+.swal2-popup {
+  font-family: 'Inter';
+}
+
+.swal2-popup .swal2-confirm {
+  background-color: var(--elaGreen);
+}
+
+.swal2-popup .swal2-confirm:active, .swal2-popup .swal2-confirm:focus {
+  box-shadow: none;
+  border: 0;
+}
+
+.ql-editor {
+  height: 250px;
+  max-height: 250px;
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 20pt;
+  }
+}
